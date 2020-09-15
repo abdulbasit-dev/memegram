@@ -7,7 +7,7 @@ import Modal from './Modal'
 function Home() {
   const [{selectedImg}, dispatch] = useContext(MemeContext)
   const [genra, setGenra] = useState('')
-  const genras = ['anime', 'programing', 'dc']
+  const genras = ['select a genra', 'anime', 'programing', 'dc']
 
   const [memes, setMemes] = useState([])
   useEffect(() => {
@@ -37,6 +37,8 @@ function Home() {
       .onSnapshot(snapshot => {
         setMemes(snapshot.docs.map(doc => doc.data()))
       })
+
+    console.log(memes)
   }
 
   return (
