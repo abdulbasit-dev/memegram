@@ -7,7 +7,7 @@ import Modal from './Modal'
 function Home() {
   const [{selectedImg}, dispatch] = useContext(MemeContext)
   const [genra, setGenra] = useState('')
-  const genras = ['all', 'anime', 'programing', 'dc']
+  const genras = ['anime', 'programing', 'dc']
 
   const [memes, setMemes] = useState([])
   useEffect(() => {
